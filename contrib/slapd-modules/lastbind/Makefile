@@ -16,7 +16,8 @@ LDAP_INC = -I$(LDAP_BUILD)/include -I$(LDAP_SRC)/include -I$(LDAP_SRC)/servers/s
 LDAP_LIB = $(LDAP_BUILD)/libraries/libldap/libldap.la \
 	$(LDAP_BUILD)/libraries/liblber/liblber.la
 
-LIBTOOL = $(LDAP_BUILD)/libtool
+# LIBTOOL = $(LDAP_BUILD)/libtool
+LIBTOOL = /bin/libtool
 INSTALL = /usr/bin/install
 CC = gcc
 OPT = -g -O2 -Wall
@@ -34,7 +35,8 @@ ldap_subdir=/openldap
 
 libdir=$(exec_prefix)/lib
 libexecdir=$(exec_prefix)/libexec
-moduledir = $(libexecdir)$(ldap_subdir)
+# moduledir = $(libexecdir)$(ldap_subdir)
+moduledir = /usr/lib64$(ldap_subdir)
 mandir = $(exec_prefix)/share/man
 man5dir = $(mandir)/man5
 
